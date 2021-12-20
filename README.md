@@ -34,7 +34,7 @@ Copy the catalog Example_TRANSPARENT_MODBUS\ to you SDK under ICI_Applications\
 
 ## Full Documentation
 Please see the documentation located here:
-[https://radiocrafts.github.io/TRANSPARENT_MODBUS_Example]
+[https://radiocrafts.github.io/RIIM_Transparent_Modbus_Example]
 
 ## Contact
 Contact Radiocrafts AS at [https://radiocrafts.com/contact/]
