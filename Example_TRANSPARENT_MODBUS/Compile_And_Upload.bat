@@ -1,11 +1,10 @@
-set PATH_TO_MAKE="C:\Program Files (x86)\GnuWin32\bin\make.exe"
+rem For all source files in the SRC directory, compile and upload
 
 for %%i IN (SRC/*.c) DO (
-    make SOURCE_FILE="SRC\%%i"
+   cmake --fresh -G"Ninja" -S"./SRC" -B"./Output" -D"SOURCE_FILE=./%%i"
+   cmake --build ./Output
+   python ..\..\Framework\Tools\rc18xx_bootloader_utility.pyz load-image -f "./Output/%%~ni.bin"
 )
-
-@rem Remove unused files for clarity
-@del Output\*.o Output\*.map Output\*.elf Output\*.hex
 
 
 @echo;
