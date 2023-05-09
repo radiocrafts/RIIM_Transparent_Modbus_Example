@@ -1,14 +1,12 @@
 #!/bin/bash
-set -e
+#set -e
 
 for f in SRC/*.c
-do
-    make SOURCE_FILE='$f'
+do   
+    cmake --fresh -G"Ninja" -S"./SRC" -B"./Output" -D"SOURCE_FILE=./$(basename -- $f)"
+    cmake --build ./Output
+    python ../../Framework/Tools/rc18xx_bootloader_utility.pyz load-image -f "./Output/$(basename -a -s .c -- $f).bin"
 done
-
-# Remove unused files for clarity
-rm -f Output/*.o Output/*.map Output/*.elf Output/*.hex
-
 
 echo;
 echo;

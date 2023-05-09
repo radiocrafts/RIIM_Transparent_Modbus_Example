@@ -1,5 +1,5 @@
 #*****************************************************************************
-# * Copyright ©2019. Radiocrafts AS (Radiocrafts).  All Rights Reserved. 
+# * Copyright ©2023. Radiocrafts AS (Radiocrafts).  All Rights Reserved. 
 # * Permission to use, copy, modify, and distribute this software and 
 # * its documentation, without fee and without a signed licensing 
 # * agreement, is hereby granted, provided that the above copyright 
